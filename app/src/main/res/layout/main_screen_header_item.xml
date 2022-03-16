@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="IT IS MOVIE APP"
+        android:gravity="center"
+        />
+    <TextView
+        android:id="@+id/header_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="It is description"
+        app:layout_constraintTop_toBottomOf="@id/header_title"
+        android:gravity="center" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

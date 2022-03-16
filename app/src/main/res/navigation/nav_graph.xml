@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.movvy.presentation.ui.mainlist.MainListFragment"
+        android:label="DogsListFragment"
+        tools:layout="@layout/layout_movies_list"
+        >
+        <action
+            android:id="@+id/action_dogsListFragment_to_favoritesFragment"
+            app:destination="@id/favorite" />
+        <action
+            android:id="@+id/action_home_to_detailFragment"
+            app:destination="@id/detailFragment" >
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/favorite"
+        android:name="com.example.movvy.presentation.ui.favorites.FavoritesFragment"
+        android:label="FavoritesFragment"
+        tools:layout="@layout/layout_favorites"
+        >
+        <action
+            android:id="@+id/action_favoritesFragment_to_profileFragment"
+            app:destination="@id/profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.movvy.presentation.ui.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/layout_profile"
+        />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.movvy.presentation.ui.detail.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="movie_id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>

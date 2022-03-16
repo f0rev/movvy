@@ -1,0 +1,5 @@
+rootProject.name = "Movvy"
+include ':app'
+include ':module-injector'
+include ':core-network'
+include ':core-utill'
